@@ -2,8 +2,8 @@
 
 ## Contributors
 
-Jewell Callahan: jay-madame
-Anya Kim: anya-kim
+Jewell Callahan: jay-madame <br>
+Anya Kim: anya-kim <br>
 Thanh Phan: tphan1-23
 
 ## Project Summary
