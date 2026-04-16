@@ -15,3 +15,18 @@ Lunar Lander Gameplay:
 Based off the physic's simulation game, in which you attempt to land a lunar module onto the moon's surface.
 
 **In the context of this project**, we will be using the Python package ```gymnasium``` from  https://gymnasium.farama.org/environments/box2d/lunar_lander/
+
+## To build project
+
+### Create the virtual environment
+```python -m venv venv```
+
+### Activate it (Windows)
+```venv\Scripts\activate```
+
+### Activate it (Mac/Linux)
+```source venv/bin/activate```
+
+### Donwload dependencies
+```pip install -r docs/requirements.txt```
+
