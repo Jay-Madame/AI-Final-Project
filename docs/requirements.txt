@@ -1,4 +1,7 @@
-gymnasium
 torch
 numpy
 matplotlib
+gymnasium
+gymnasium[box2d]
+boto3
+awscli
