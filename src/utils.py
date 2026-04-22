@@ -69,7 +69,7 @@ def plot_epsilon(csv_path, save_path):
     try:
         df = pd.read_csv(csv_path)
     except FileNotFoundError:
-        print(f"Error: Could not find {csv_path}")
+        print(f"Error Could not find {csv_path}")
         return
 
     episode_col = 'Episode'
