@@ -37,7 +37,7 @@ def plot_rewards(csv_path, save_path):
     try:
         df = pd.read_csv(csv_path)
     except FileNotFoundError:
-        print(f"Error: Could not find {csv_path}")
+        print(f"Error Could not find {csv_path}")
         return
 
     episode_col = 'Episode'
@@ -51,7 +51,7 @@ def plot_rewards(csv_path, save_path):
     
     plt.plot(df[episode_col], rolling_avg, label='Rolling Average (50)', color='red', linewidth=2)
     
-    plt.title('DQN Lunar Lander: Training Rewards Over Time')
+    plt.title('DQN Lunar Lander Training Rewards Over Time')
     plt.xlabel('Episode')
     plt.ylabel('Total Reward')
     plt.legend()
