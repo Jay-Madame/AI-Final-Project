@@ -1,5 +1,5 @@
 """
-    [] DQN for LunarLander
+    [x] DQN for LunarLander
         - 8 layer input:
             - x position
             - y position
@@ -14,7 +14,7 @@
             - fire main engine
             - fire left orientation engine
             - fire right orientation engine
-    [] Replay Buffer
+    [x] Replay Buffer
     based from https://medium.com/@coldstart_coder/dqn-algorithm-training-an-ai-to-land-on-the-moon-1a1307748ed9
 """
 
@@ -139,8 +139,9 @@ class DQNAgent:
         self.optimizer.step()
 
         # sync target network periodically, not every step to stabilize learning            if self.learn_step % self.target_update_freq == 0:
-        self.target_net.load_state_dict(self.policy_net.state_dict())
-        
+        if self.learn_step % self.target_update_freq == 0:
+            self.target_net.load_state_dict(self.policy_net.state_dict())
+
         self.learn_step += 1
         # decay epsilon so the agent explores less as it learns more
         self.epsilon = max(self.epsilon_min, self.epsilon - self.epsilon_decay)
