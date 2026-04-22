@@ -78,7 +78,7 @@ def plot_epsilon(csv_path, save_path):
     plt.figure(figsize=(10, 6))
     plt.plot(df[episode_col], df[epsilon_col], label='Epsilon Decay', color='green', linewidth=2)
     
-    plt.title('DQN Lunar Lander: Epsilon Decay Over Time')
+    plt.title('DQN Lunar Lander Epsilon Decay Over Time')
     plt.xlabel('Episode')
     plt.ylabel('Epsilon')
     plt.legend()
