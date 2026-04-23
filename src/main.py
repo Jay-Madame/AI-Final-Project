@@ -49,6 +49,7 @@ def main():
         train()
 
     elif args.eval:
+        render_mode = None if not os.environ.get("DISPLAY") else "human"
         env = gym.make("LunarLander-v3", render_mode="human")
         state_size = env.observation_space.shape[0]
         action_size = env.action_space.n
