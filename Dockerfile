@@ -3,6 +3,7 @@ FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime
 # system dependencies
 RUN apt-get update && apt-get install -y \
     swig \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
@@ -18,4 +19,4 @@ COPY docs/ ./docs/
 RUN mkdir -p docs/checkpoints docs/logs
 
 # auto-stop EC2 instance
-CMD ["sh", "-c", "python src/main.py --train && aws ec2 stop-instances --instance-ids $(curl -s http://169.254.169.254/latest/meta-data/instance-id)"]
+CMD ["sh", "-c", "python src/main.py --train && aws ec2 stop-instances --instance-ids $(curl -s http://169.254.169.254/latest/meta-data/instance-id) --region us-east-1"]
