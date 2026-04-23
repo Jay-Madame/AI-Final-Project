@@ -21,7 +21,7 @@ def train():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-    num_episodes = 1000
+    num_episodes = 2000
     for episode in range(num_episodes):
         # check time to avoid expensive AWS fees
         elapsed_hours = (time.time() - start_time) / 3600

@@ -76,8 +76,8 @@ class DQNAgent:
         gamma: float = 0.99,
         epsilon_start: float = 1.0,
         epsilon_min: float = 0.01,
-        epsilon_decay: float = 5e-6,
-        buffer_size: int = 10000,
+        epsilon_decay: float = 1e-5,
+        buffer_size: int = 100000,
         batch_size: int = 64,
         target_update_freq: int = 500,
     ):

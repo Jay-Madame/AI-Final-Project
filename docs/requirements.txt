@@ -5,4 +5,4 @@ gymnasium
 gymnasium[box2d]
 boto3
 awscli
-panda
+pandas
